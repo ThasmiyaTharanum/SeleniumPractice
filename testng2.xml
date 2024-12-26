@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoanDepartment" >
+<listeners>
+	<listener class-name="Test.Listeners"/>
+</listeners>
+	<parameter name="URL" value="QAacademy.com"/>
+	<parameter name="Key" value="UserName"/>
+	 <!-- and as you are defining it globally, it is applicable to all your test cases in your package-->
+  <test name="PersonalLoan">
+    <packages>
+		<package name="Test"/>
+	 <!-- you can run whole testcases with help of package,mostly used in regression testing-->
+	</packages>
+ </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoanDepartment" parallel="tests" thread-count="5">
+	
+	  <test name="PersonalLoan" parallel="classes" thread-count="5">
+    <classes>
+      <class name="Test.day1">
+		  <methods>
+			  <include name="HomeLoan"/> <!-- We can include only this testcase by excluding all -->
+		  </methods>
+      
+      </class>
+      <class name="Test.day2"/>
+      <class name="Test.day4">
+		  <methods>
+			  <exclude name="Mobile.*"></exclude> 
+<!-- Mobile.* represents whatever testcases contains after mobile keyword has to exclude-->
+		  </methods>
+	  </class>
+    </classes>
+  </test> 
+  
+ <test name ="CarLoan">
+	 <classes>	 
+<class name ="Test.day3">
+	<methods>
+		<exclude name="carloanType"/>    <!-- we can exclude this testcase-->
+	</methods>
+</class>	 
+ </classes>
+ </test>
+</suite> <!-- Suite -->
